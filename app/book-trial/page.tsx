@@ -92,8 +92,8 @@ export default function BookTrialPage() {
 
       {/* Main Content */}
       <section className="py-16 md:py-24 px-4 bg-gray-50">
-        {/* Left Column: Information */}
-        <div className="space-y-8">
+        {/*  Information */}
+        <div className="w-[80%] mx-auto">
           <div>
             <h2 className="text-3xl font-bold text-text mb-6">
               What to Expect
@@ -140,8 +140,8 @@ export default function BookTrialPage() {
           </div>
         </div>
 
-        {/* Right Column: Cal.com Booking */}
-        <div className="">
+        {/* Cal.com Booking */}
+        <div className="mt-16  mx-auto">
           <div className="bg-white p-2 md:p-6 rounded-3xl shadow-xl border border-gray-100 h-full min-h-[600px]">
             <div className="mb-6 px-4">
               <h2 className="text-2xl md:text-3xl font-bold text-text mb-2">
