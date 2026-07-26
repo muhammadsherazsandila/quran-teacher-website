@@ -19,6 +19,7 @@ type FormValues = z.infer<typeof formSchema>;
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
 
   const {
     register,
@@ -31,19 +32,26 @@ export default function ContactForm() {
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
+    setErrorMsg('');
     
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
-        {
-          from_name: data.name,
-          from_email: data.email,
-          subject: data.subject,
-          message: data.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
-      );
+      if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID) {
+        // Fallback to simulation if keys are missing
+        console.log('Simulation mode (no EmailJS keys provided)', data);
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+      } else {
+        await emailjs.send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+          {
+            from_name: data.name,
+            from_email: data.email,
+            subject: data.subject,
+            message: data.message,
+          },
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
+        );
+      }
       
       setIsSubmitting(false);
       setIsSuccess(true);
@@ -54,7 +62,7 @@ export default function ContactForm() {
     } catch (error) {
       console.error('Failed to send email:', error);
       setIsSubmitting(false);
-      alert('Failed to send message. Please try again later.');
+      setErrorMsg('Failed to send message. Please try again later.');
     }
   };
 
@@ -153,6 +161,12 @@ export default function ContactForm() {
           </>
         )}
       </button>
+
+      {errorMsg && (
+        <div className="p-4 bg-red-50 border border-red-200 text-red-600 rounded-xl text-center text-sm font-medium">
+          {errorMsg}
+        </div>
+      )}
     </form>
   );
 }
