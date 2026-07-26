@@ -1,10 +1,10 @@
 {
   "project": {
     "name": "Personal Online Quran Teacher Website",
-    "framework": "Next.js 16 (App Router)",
+    "framework": "Next.js (App Router)",
     "language": "TypeScript",
     "styling": {
-      "framework": "Tailwind CSS v4",
+      "framework": "Tailwind CSS",
       "typography": {
         "fontFamily": "Poppins, sans-serif"
       }

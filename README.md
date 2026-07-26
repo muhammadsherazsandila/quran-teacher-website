@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hafiz Muhammad - Personal Online Quran Teacher
+
+A modern, premium, highly professional personal branding website for an online Quran teacher, built with Next.js 16 (App Router), TypeScript, and Tailwind CSS v4.
+
+## Features
+
+- **Modern Tech Stack**: Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4.
+- **Responsive Design**: Fully responsive across mobile, tablet, and desktop viewports.
+- **SEO Optimized**: Advanced SEO implementation with Next.js Metadata API, JSON-LD Structured Data (Organization, Person, Course, Breadcrumb, FAQ schemas), semantic HTML, and optimized performance.
+- **Beautiful UI Components**: Custom-designed components with smooth Framer Motion animations.
+- **Premium Aesthetics**: Professional color palette (teal, gold accents) emphasizing trust and elegance.
+- **Form Validation**: Contact and booking forms built with React Hook Form and Zod.
+
+## Project Structure
+
+- `/app`: Next.js App Router containing pages, layouts, and global styles.
+- `/app/components`: Reusable UI components (Navbar, Footer, CourseCard, TestimonialCard, etc.)
+- `/app/data`: Static mock data powering the website (courses, testimonials, blog posts, FAQs).
+- `/app/lib`: Utilities for metadata and structured data generation.
+
+## Available Pages
+
+- Home (`/`)
+- About (`/about`)
+- Courses (`/courses`)
+- Testimonials (`/testimonials`)
+- Blog (`/blog` and `/blog/[slug]`)
+- Contact (`/contact`)
+- Book Free Trial (`/book-trial`)
 
 ## Getting Started
 
-First, run the development server:
+1. **Install Dependencies**
+   ```bash
+   npm install --legacy-peer-deps
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Run the Development Server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Production Build**
+   ```bash
+   npm run build
+   npm run start
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design System
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Primary**: `#0F766E` (Teal)
+- **Secondary**: `#F8FAFC` (Slate/Gray)
+- **Accent**: `#D4AF37` (Gold)
+- **Text**: `#1E293B` (Dark Slate)
+- **Background**: `#FFFFFF` (White)
+- **Font**: Poppins (via `next/font/google`)
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
