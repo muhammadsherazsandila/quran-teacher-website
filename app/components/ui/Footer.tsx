@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Phone, Mail, Clock, MapPin, Globe, MessageCircle, BookOpen, Heart } from 'lucide-react';
+import { Phone, Mail, Clock, MapPin } from 'lucide-react';
+import { FaFacebookF, FaTiktok, FaYoutube, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -15,17 +16,20 @@ export default function Footer() {
               Dedicated to spreading the light of the Quran through interactive, personalized online classes for students of all ages worldwide.
             </p>
             <div className="flex gap-4">
+              <Link href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4AF37] transition-colors">
+                <FaFacebookF className="w-5 h-5 text-white" />
+              </Link>
+              <Link href="#" aria-label="TikTok" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4AF37] transition-colors">
+                <FaTiktok className="w-5 h-5 text-white" />
+              </Link>
+              <Link href="#" aria-label="YouTube" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4AF37] transition-colors">
+                <FaYoutube className="w-5 h-5 text-white" />
+              </Link>
+              <Link href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4AF37] transition-colors">
+                <FaInstagram className="w-5 h-5 text-white" />
+              </Link>
               <Link href="#" aria-label="WhatsApp" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4AF37] transition-colors">
-                <MessageCircle className="w-5 h-5 text-white" />
-              </Link>
-              <Link href="#" aria-label="Website" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4AF37] transition-colors">
-                <Globe className="w-5 h-5 text-white" />
-              </Link>
-              <Link href="#" aria-label="Quran" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4AF37] transition-colors">
-                <BookOpen className="w-5 h-5 text-white" />
-              </Link>
-              <Link href="#" aria-label="Support" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4AF37] transition-colors">
-                <Heart className="w-5 h-5 text-white" />
+                <FaWhatsapp className="w-5 h-5 text-white" />
               </Link>
             </div>
           </div>

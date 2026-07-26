@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, Menu, X } from 'lucide-react';
+import { AnimatePresence, motion } from "framer-motion";
+import { BookOpen, Menu, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Courses', path: '/courses' },
-  { name: 'Testimonials', path: '/testimonials' },
-  { name: 'Blog', path: '/blog' },
-  { name: 'Contact', path: '/contact' },
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Courses", path: "/courses" },
+  { name: "Testimonials", path: "/testimonials" },
+  { name: "Blog", path: "/blog" },
+  { name: "Contact", path: "/contact" },
 ];
 
 export default function Navbar() {
@@ -24,21 +24,25 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
+        scrolled ? "bg-white shadow-md py-3" : "bg-transparent py-5"
       } font-[family-name:var(--font-poppins)]`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 z-50">
-          <BookOpen className={`w-8 h-8 ${scrolled ? 'text-[#0F766E]' : 'text-[#D4AF37]'}`} />
-          <span className={`text-xl font-bold ${scrolled ? 'text-[#1E293B]' : 'text-[#1E293B] md:text-white'}`}>
+          <BookOpen
+            className={`w-8 h-8 ${scrolled ? "text-[#0F766E]" : "text-[#D4AF37]"}`}
+          />
+          <span
+            className={`text-xl font-bold ${scrolled ? "text-[#1E293B]" : "text-[#1E293B"}`}
+          >
             Hafiz Muhammad
           </span>
         </Link>
@@ -52,7 +56,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.path}
                 className={`relative font-medium transition-colors hover:text-[#D4AF37] ${
-                  isActive ? 'text-[#D4AF37]' : scrolled ? 'text-[#1E293B]' : 'text-white'
+                  isActive ? "text-[#D4AF37]" : "text-[#1E293B]"
                 } link-underline`}
               >
                 {link.name}
@@ -74,9 +78,13 @@ export default function Navbar() {
           aria-label="Toggle Menu"
         >
           {mobileMenuOpen ? (
-            <X className={`w-6 h-6 ${mobileMenuOpen ? 'text-[#1E293B]' : scrolled ? 'text-[#1E293B]' : 'text-white'}`} />
+            <X
+              className={`w-6 h-6 ${mobileMenuOpen ? "text-[#1E293B]" : scrolled ? "text-[#1E293B]" : "text-white"}`}
+            />
           ) : (
-            <Menu className={`w-6 h-6 ${scrolled ? 'text-[#1E293B]' : 'text-[#1E293B] md:text-white'}`} />
+            <Menu
+              className={`w-6 h-6 ${scrolled ? "text-[#1E293B]" : "text-[#1E293B] md:text-white"}`}
+            />
           )}
         </button>
       </div>
@@ -85,10 +93,10 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ x: '100%' }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'tween', duration: 0.3 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "tween", duration: 0.3 }}
             className="fixed inset-0 bg-white z-40 flex flex-col pt-24 px-6 md:hidden"
           >
             <nav className="flex flex-col gap-6 text-lg">
@@ -99,7 +107,7 @@ export default function Navbar() {
                     key={link.name}
                     href={link.path}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`font-semibold ${isActive ? 'text-[#D4AF37]' : 'text-[#1E293B]'}`}
+                    className={`font-semibold ${isActive ? "text-[#D4AF37]" : "text-[#1E293B]"}`}
                   >
                     {link.name}
                   </Link>
