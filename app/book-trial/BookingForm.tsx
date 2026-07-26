@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { CheckCircle2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -38,14 +39,32 @@ export default function BookingForm() {
   });
 
   const onSubmit = async (data: FormData) => {
-    console.log('Form Submitted:', data);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSuccess(true);
-    reset();
-    
-    // Hide success message after 5 seconds
-    setTimeout(() => setIsSuccess(false), 5000);
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+        {
+          from_name: data.name,
+          from_email: data.email,
+          whatsapp: data.whatsapp,
+          country: data.country,
+          student_age: data.studentAge,
+          current_level: data.currentLevel,
+          preferred_time: data.preferredTime,
+          message: data.message || "No additional message",
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
+      );
+      
+      setIsSuccess(true);
+      reset();
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => setIsSuccess(false), 5000);
+    } catch (error) {
+      console.error('Failed to send booking request:', error);
+      alert('Failed to send booking request. Please try again or contact us via WhatsApp.');
+    }
   };
 
   if (isSuccess) {
