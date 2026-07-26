@@ -1,0 +1,280 @@
+{
+  "project": {
+    "name": "Personal Online Quran Teacher Website",
+    "framework": "Next.js 16 (App Router)",
+    "language": "TypeScript",
+    "styling": {
+      "framework": "Tailwind CSS v4",
+      "typography": {
+        "fontFamily": "Poppins, sans-serif"
+      }
+    },
+    "deployment": "Vercel Ready",
+    "packageManager": "npm"
+  },
+  "objective": "Build a modern, premium, highly professional personal branding website for an individual Quran teacher based in Pakistan who teaches students worldwide. The website should focus on building trust, generating leads, and encouraging visitors to book a free trial class. This is NOT a Quran academy website; it represents a single teacher as a personal brand.",
+  "design": {
+    "style": [
+      "Clean",
+      "Minimal",
+      "Premium",
+      "Modern",
+      "Trustworthy",
+      "Elegant"
+    ],
+    "colors": {
+      "primary": "#0F766E",
+      "secondary": "#F8FAFC",
+      "accent": "#D4AF37",
+      "text": "#1E293B",
+      "background": "#FFFFFF"
+    },
+    "feel": "Visitors should immediately feel that the teacher is experienced, authentic, trustworthy, and professional."
+  },
+  "techStack": {
+    "frontend": ["Next.js App Router", "React", "TypeScript", "Tailwind CSS"],
+    "libraries": [
+      "Framer Motion",
+      "Lucide React",
+      "React Hook Form",
+      "Zod",
+      "clsx",
+      "email.js"
+    ],
+    "seo": {
+      "required": true,
+      "reference": "https://strapi.io/blog/nextjs-seo",
+      "requirements": [
+        "Use Next.js Metadata API",
+        "Dynamic page metadata",
+        "Open Graph metadata",
+        "Twitter cards",
+        "Canonical URLs",
+        "robots.txt",
+        "sitemap.xml",
+        "Structured Data (JSON-LD)",
+        "Organization Schema",
+        "Person Schema",
+        "Breadcrumb Schema where applicable",
+        "Semantic HTML",
+        "Image optimization using next/image",
+        "Proper heading hierarchy",
+        "Optimized page titles",
+        "Meta descriptions",
+        "Alt text for all images",
+        "Performance optimization",
+        "Core Web Vitals optimization"
+      ]
+    }
+  },
+  "website": {
+    "type": "Personal Brand Website",
+    "audience": [
+      "Parents",
+      "Children",
+      "Adults",
+      "International Students",
+      "Pakistan",
+      "USA",
+      "UK",
+      "Canada",
+      "Australia",
+      "UAE"
+    ]
+  },
+  "pages": [
+    {
+      "name": "Home",
+      "route": "/",
+      "sections": [
+        "Sticky Navigation",
+        "Hero Section",
+        "About Me Preview",
+        "Why Learn With Me",
+        "Courses Overview",
+        "Teaching Method",
+        "Student Statistics",
+        "Countries Served",
+        "Testimonials",
+        "FAQ",
+        "Call To Action",
+        "Footer"
+      ]
+    },
+    {
+      "name": "About Me",
+      "route": "/about",
+      "sections": [
+        "Hero",
+        "Biography",
+        "Mission",
+        "Teaching Philosophy",
+        "Qualifications",
+        "Experience",
+        "Languages",
+        "Personal Journey",
+        "Call To Action"
+      ]
+    },
+    {
+      "name": "Courses",
+      "route": "/courses",
+      "sections": [
+        "Hero",
+        "Course Cards",
+        "Course Details",
+        "Who Can Join",
+        "Learning Outcomes",
+        "FAQ",
+        "Book Trial CTA"
+      ]
+    },
+    {
+      "name": "Testimonials",
+      "route": "/testimonials",
+      "sections": [
+        "Video Testimonials",
+        "Written Reviews",
+        "Parent Reviews",
+        "Student Success Stories"
+      ]
+    },
+    {
+      "name": "Book Trial",
+      "route": "/book-trial",
+      "sections": [
+        "cal.com embeded section for booking call",
+        "Benefits",
+        "Booking Form",
+        "Preferred Time",
+        "Country",
+        "Student Age",
+        "Current Level",
+        "WhatsApp CTA"
+      ]
+    },
+    {
+      "name": "Blog",
+      "route": "/blog",
+      "sections": [
+        "Featured Articles",
+        "Categories",
+        "Recent Posts",
+        "Newsletter CTA"
+      ]
+    },
+    {
+      "name": "Contact",
+      "route": "/contact",
+      "sections": [
+        "Contact Information",
+        "WhatsApp",
+        "Email",
+        "Business Hours",
+        "Contact Form",
+        "Location",
+        "Google Map"
+      ]
+    }
+  ],
+  "navigation": {
+    "desktop": [
+      "Home",
+      "About",
+      "Courses",
+      "Testimonials",
+      "Blog",
+      "Contact",
+      "Book Free Trial"
+    ],
+    "mobile": "Responsive Drawer Navigation"
+  },
+  "courses": [
+    "Noorani Qaida",
+    "Quran Reading",
+    "Quran with Tajweed",
+    "Quran Memorization",
+    "Islamic Studies"
+  ],
+  "components": [
+    "Responsive Navbar",
+    "Responsive Footer",
+    "Hero",
+    "Section Heading",
+    "Course Card",
+    "Teacher Profile",
+    "Testimonial Card",
+    "Country Flags",
+    "FAQ Accordion",
+    "Animated Counters",
+    "Booking Form",
+    "Contact Form",
+    "Blog Card",
+    "CTA Banner",
+    "Floating WhatsApp Button",
+    "Scroll To Top Button"
+  ],
+  "forms": {
+    "validation": "Zod",
+    "library": "React Hook Form"
+  },
+  "responsive": {
+    "mobile": true,
+    "tablet": true,
+    "desktop": true,
+    "largeDesktop": true
+  },
+  "performance": {
+    "lazyLoading": true,
+    "dynamicImports": true,
+    "imageOptimization": true,
+    "fontOptimization": true,
+    "codeSplitting": true
+  },
+  "accessibility": {
+    "ariaLabels": true,
+    "keyboardNavigation": true,
+    "contrastCompliance": true,
+    "semanticHTML": true
+  },
+  "content": {
+    "language": "English",
+    "tone": "Professional, warm, trustworthy, and welcoming"
+  },
+  "deliverables": [
+    "Complete Next.js source code",
+    "TypeScript implementation",
+    "Tailwind CSS styling",
+    "Responsive design",
+    "SEO optimization",
+    "Production-ready code",
+    "Reusable component architecture",
+    "Clean folder structure",
+    "README.md with setup instructions"
+  ],
+  "github": {
+    "required": true,
+    "instructions": [
+      "Initialize a Git repository after completing the project.",
+      "Create a comprehensive README.md.",
+      "Commit the project using meaningful commit messages.",
+      "Create a new GitHub repository using the GitHub MCP.",
+      "Push the complete codebase to the newly created repository.",
+      "Return the repository URL after the push is successful."
+    ]
+  },
+  "qualityRequirements": [
+    "Use Server Components wherever appropriate.",
+    "Use Client Components only when necessary.",
+    "Follow Next.js App Router best practices.",
+    "Maintain clean, scalable folder architecture.",
+    "Write reusable and modular components.",
+    "Ensure TypeScript has no type errors.",
+    "Ensure the project builds without warnings or errors.",
+    "Follow ESLint recommendations.",
+    "Write clean and maintainable code.",
+    "Avoid unnecessary dependencies.",
+    "Optimize for SEO and performance.",
+    "Produce production-ready code."
+  ]
+}
