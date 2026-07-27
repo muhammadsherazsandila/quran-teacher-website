@@ -15,13 +15,13 @@ export default function SectionHeading({
     <div className={`mb-12 font-[family-name:var(--font-poppins)] ${centered ? 'text-center' : 'text-left'}`}>
       <h2
         className={`text-3xl md:text-4xl font-bold mb-4 ${
-          light ? 'text-white' : 'text-[#1E293B]'
+          light ? 'text-white' : 'text-[#000a57]'
         }`}
       >
         {title}
       </h2>
       <div
-        className={`h-1 w-[60px] bg-gradient-to-r from-[#D4AF37] to-[#B8972E] rounded-full mb-6 ${
+        className={`h-1 w-[60px] bg-gradient-to-r from-[#000a57] to-[#002874] rounded-full mb-6 ${
           centered ? 'mx-auto' : ''
         }`}
       />

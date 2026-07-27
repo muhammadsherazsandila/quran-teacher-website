@@ -30,18 +30,16 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md py-3" : "bg-transparent py-5"
-      } font-[family-name:var(--font-poppins)]`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 bg-white shadow-md py-3 font-[family-name:var(--font-poppins)]`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 z-50">
           <BookOpen
-            className={`w-8 h-8 ${scrolled ? "text-[#0F766E]" : "text-[#D4AF37]"}`}
+            className={`w-8 h-8 ${scrolled ? "text-[#002874]" : "text-[#002874]"}`}
           />
           <span
-            className={`text-xl font-bold ${scrolled ? "text-[#1E293B]" : "text-[#1E293B"}`}
+            className={`text-xl font-bold ${scrolled ? "text-[#000a57]" : "text-[#000a57]"}`}
           >
             Hafiz Muhammad
           </span>
@@ -55,8 +53,8 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.path}
-                className={`relative font-medium transition-colors hover:text-[#D4AF37] ${
-                  isActive ? "text-[#D4AF37]" : "text-[#1E293B]"
+                className={`relative font-medium transition-colors hover:text-[#002874] ${
+                  isActive ? "text-[#002874]" : "text-[#000a57]"
                 } link-underline`}
               >
                 {link.name}
@@ -65,7 +63,7 @@ export default function Navbar() {
           })}
           <Link
             href="/book-trial"
-            className="bg-gradient-to-r from-[#D4AF37] to-[#B8972E] text-white px-6 py-2 rounded-full font-medium transition-transform hover:scale-105 shadow-md"
+            className="bg-gradient-to-r from-[#000a57] to-[#002874] text-white px-6 py-2 rounded-full font-medium transition-transform hover:scale-105 shadow-md"
           >
             Book Free Trial
           </Link>
@@ -79,11 +77,11 @@ export default function Navbar() {
         >
           {mobileMenuOpen ? (
             <X
-              className={`w-6 h-6 ${mobileMenuOpen ? "text-[#1E293B]" : scrolled ? "text-[#1E293B]" : "text-white"}`}
+              className={`w-6 h-6 ${mobileMenuOpen ? "text-[#000a57]" : scrolled ? "text-[#000a57]" : "text-white"}`}
             />
           ) : (
             <Menu
-              className={`w-6 h-6 ${scrolled ? "text-[#1E293B]" : "text-[#1E293B] md:text-white"}`}
+              className={`w-6 h-6 ${scrolled ? "text-[#000a57]" : "text-[#000a57] md:text-white"}`}
             />
           )}
         </button>
@@ -107,7 +105,7 @@ export default function Navbar() {
                     key={link.name}
                     href={link.path}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`font-semibold ${isActive ? "text-[#D4AF37]" : "text-[#1E293B]"}`}
+                    className={`font-semibold ${isActive ? "text-[#002874]" : "text-[#000a57]"}`}
                   >
                     {link.name}
                   </Link>
@@ -116,7 +114,7 @@ export default function Navbar() {
               <Link
                 href="/book-trial"
                 onClick={() => setMobileMenuOpen(false)}
-                className="bg-gradient-to-r from-[#D4AF37] to-[#B8972E] text-white px-6 py-3 rounded-full font-medium text-center mt-4 shadow-md inline-block"
+                className="bg-gradient-to-r from-[#000a57] to-[#002874] text-white px-6 py-3 rounded-full font-medium text-center mt-4 shadow-md inline-block"
               >
                 Book Free Trial
               </Link>

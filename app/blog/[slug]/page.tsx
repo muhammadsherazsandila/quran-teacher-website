@@ -113,7 +113,7 @@ export default async function BlogPostPage({ params }: Props) {
       />
 
       {/* Hero Header */}
-      <section className="bg-gradient-to-r from-primary-dark to-primary pt-24 pb-32 text-white relative islamic-pattern">
+      <section className="bg-gradient-to-r from-[#000a57] to-[#002874] pt-24 pb-32 text-white relative islamic-pattern">
         <div className="container-custom max-w-4xl relative z-10">
           <div className="flex items-center text-sm font-medium mb-8 opacity-90 text-white/80">
             <Link href="/" className="hover:text-accent transition-colors">Home</Link>

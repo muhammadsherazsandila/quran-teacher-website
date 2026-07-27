@@ -15,11 +15,11 @@ export const metadata = generatePageMetadata(
 );
 
 const iconMap: Record<string, React.ReactNode> = {
-  BookOpen: <BookOpen className="w-12 h-12 text-teal-600" />,
-  BookOpenCheck: <BookOpenCheck className="w-12 h-12 text-teal-600" />,
-  Mic: <Mic className="w-12 h-12 text-teal-600" />,
-  Brain: <Brain className="w-12 h-12 text-teal-600" />,
-  GraduationCap: <GraduationCap className="w-12 h-12 text-teal-600" />,
+  BookOpen: <BookOpen className="w-12 h-12 text-[#002874]" />,
+  BookOpenCheck: <BookOpenCheck className="w-12 h-12 text-[#002874]" />,
+  Mic: <Mic className="w-12 h-12 text-[#002874]" />,
+  Brain: <Brain className="w-12 h-12 text-[#002874]" />,
+  GraduationCap: <GraduationCap className="w-12 h-12 text-[#002874]" />,
 };
 
 export default function CoursesPage() {
@@ -45,7 +45,7 @@ export default function CoursesPage() {
       ))}
       <main className="min-h-screen">
         {/* Hero Banner */}
-        <section className="bg-gradient-to-r from-teal-900 to-teal-700 text-white py-20 islamic-pattern">
+        <section className="bg-gradient-to-r from-[#000a57] to-[#002874] text-white py-20 islamic-pattern">
           <div className="container-custom relative z-10">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 font-poppins">Our Courses</h1>
             <div className="flex items-center text-sm md:text-base opacity-90">
@@ -63,21 +63,21 @@ export default function CoursesPage() {
               <div className="container-custom grid lg:grid-cols-2 gap-12 items-center">
                 <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                   <div className="mb-6">
-                    {iconMap[course.icon] || <BookOpen className="w-12 h-12 text-teal-600" />}
+                    {iconMap[course.icon] || <BookOpen className="w-12 h-12 text-[#002874]" />}
                   </div>
                   <h2 className="text-3xl font-bold text-slate-900 mb-4 font-poppins">{course.title}</h2>
                   <div className="flex gap-3 mb-6">
-                    <span className="px-3 py-1 bg-[#D4AF37]/20 text-[#B8962E] rounded-full text-sm font-semibold">
+                    <span className="px-3 py-1 bg-gray-100 text-[#000a57] rounded-full text-sm font-semibold">
                       {course.level}
                     </span>
-                    <span className="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-semibold">
+                    <span className="px-3 py-1 bg-gray-100 text-[#002874] rounded-full text-sm font-semibold">
                       {course.duration}
                     </span>
                   </div>
                   <p className="text-slate-600 text-lg leading-relaxed mb-8">
                     {course.description}
                   </p>
-                  <Link href="/free-trial" className="inline-flex items-center justify-center px-6 py-3 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors">
+                  <Link href="/free-trial" className="inline-flex items-center justify-center px-6 py-3 bg-[#002874] text-white rounded-lg font-medium hover:bg-[#000a57] transition-colors">
                     Start Free Trial
                   </Link>
                 </div>
@@ -87,7 +87,7 @@ export default function CoursesPage() {
                   <ul className="space-y-4">
                     {course.features.map((feature, fIndex) => (
                       <li key={fIndex} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-5 h-5 text-[#002874] flex-shrink-0 mt-0.5" />
                         <span className="text-slate-700">{feature}</span>
                       </li>
                     ))}
@@ -104,7 +104,7 @@ export default function CoursesPage() {
         </div>
 
         {/* Who Can Join */}
-        <section className="py-20 bg-slate-900 text-white islamic-pattern relative">
+        <section className="py-20 bg-[#000a57] text-white islamic-pattern relative">
           <div className="container-custom relative z-10">
             <SectionHeading title="Who Can Join?" subtitle="Classes adapted for all age groups" />
             
@@ -116,7 +116,7 @@ export default function CoursesPage() {
                 { age: "Adults (18+)", desc: "Flexible scheduling and focused sessions respecting adult learning styles." }
               ].map((group, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl hover:bg-white/20 transition-colors">
-                  <h3 className="text-xl font-bold text-[#D4AF37] mb-3 font-poppins">{group.age}</h3>
+                  <h3 className="text-xl font-bold text-gray-200 mb-3 font-poppins">{group.age}</h3>
                   <p className="text-slate-300">{group.desc}</p>
                 </div>
               ))}
@@ -138,8 +138,8 @@ export default function CoursesPage() {
                 "Establish a daily routine of Quran recitation"
               ].map((outcome, index) => (
                 <div key={index} className="flex items-center gap-4 p-4 rounded-lg bg-slate-50 border border-slate-100">
-                  <div className="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-5 h-5 text-teal-700" />
+                  <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="w-5 h-5 text-[#002874]" />
                   </div>
                   <span className="text-slate-700 font-medium">{outcome}</span>
                 </div>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function CTABanner() {
   return (
-    <section className="py-20 bg-gradient-to-r from-[#0F766E] to-[#0A5C55] relative overflow-hidden font-[family-name:var(--font-poppins)]">
+    <section className="py-20 bg-gradient-to-r from-[#000a57] to-[#002874] relative overflow-hidden font-[family-name:var(--font-poppins)]">
       {/* Pattern Overlay */}
       <div className="absolute inset-0 opacity-10 bg-[url('/images/islamic-pattern.png')] bg-repeat islamic-pattern" />
       
@@ -10,14 +10,14 @@ export default function CTABanner() {
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
           Ready to Start Your Quran Journey?
         </h2>
-        <p className="text-lg md:text-xl text-[#F8FAFC] max-w-2xl mx-auto mb-10 opacity-90">
+        <p className="text-lg md:text-xl text-[#f8fafc] max-w-2xl mx-auto mb-10 opacity-90">
           Join our global community of learners and enrich your life with the teachings of the Holy Quran. Start with a free 3-day trial.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link 
             href="/book-trial" 
-            className="w-full sm:w-auto bg-white text-[#0F766E] px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-lg"
+            className="w-full sm:w-auto bg-white text-[#002874] px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-lg"
           >
             Book Free Trial
           </Link>

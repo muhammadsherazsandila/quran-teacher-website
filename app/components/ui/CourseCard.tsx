@@ -24,7 +24,7 @@ export default function CourseCard({ title, description, icon, features, level, 
 
   return (
     <div className="bg-white rounded-2xl shadow-premium overflow-hidden card-hover flex flex-col h-full relative">
-      <div className="h-2 w-full bg-gradient-to-r from-primary to-teal-400 absolute top-0 left-0" />
+      <div className="h-2 w-full bg-gradient-to-r from-primary to-primary-light absolute top-0 left-0" />
       
       <div className="p-6 flex flex-col flex-grow pt-8">
         <div className="flex justify-between items-start mb-4">

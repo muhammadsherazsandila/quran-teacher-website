@@ -15,7 +15,7 @@ export default function BlogCard({ slug, title, excerpt, category, date, readTim
     <div className="bg-white rounded-2xl shadow-premium overflow-hidden card-hover relative group h-full flex flex-col">
       <Link href={`/blog/${slug}`} className="absolute inset-0 z-0" aria-label={`Read ${title}`} />
       
-      <div className="h-1.5 w-full bg-gradient-to-r from-primary via-accent to-primary gradient-primary absolute top-0 left-0" />
+      <div className="h-1.5 w-full bg-gradient-to-r from-primary via-primary-light to-primary gradient-primary absolute top-0 left-0" />
       
       <div className="p-6 flex flex-col flex-grow pt-8 relative z-10 pointer-events-none">
         <div className="mb-4">

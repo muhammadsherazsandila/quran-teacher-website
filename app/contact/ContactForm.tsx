@@ -72,13 +72,13 @@ export default function ContactForm() {
         <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
           <CheckCircle2 className="w-8 h-8" />
         </div>
-        <h3 className="text-2xl font-bold text-[#1E293B] mb-2 font-[family-name:--font-poppins]">Message Sent Successfully!</h3>
-        <p className="text-[#64748B] max-w-sm mx-auto">
+        <h3 className="text-2xl font-bold text-[#000a57] mb-2 font-[family-name:--font-poppins]">Message Sent Successfully!</h3>
+        <p className="text-gray-600 max-w-sm mx-auto">
           Thank you for reaching out. We have received your message and our team will get back to you shortly.
         </p>
         <button 
           onClick={() => setIsSuccess(false)}
-          className="mt-8 px-6 py-2.5 bg-[#0F766E] text-white font-semibold rounded-xl hover:bg-[#0d645d] transition-colors"
+          className="mt-8 px-6 py-2.5 bg-[#002874] text-white font-semibold rounded-xl hover:bg-[#000a57] transition-colors"
         >
           Send Another Message
         </button>
@@ -89,13 +89,13 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-[#1E293B] mb-2">
+        <label htmlFor="name" className="block text-sm font-medium text-[#000a57] mb-2">
           Full Name
         </label>
         <input
           id="name"
           type="text"
-          className={`w-full px-4 py-3.5 bg-white border ${errors.name ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-[#0F766E] focus:ring-[#0F766E]/20'} rounded-xl focus:outline-none focus:ring-4 transition-all`}
+          className={`w-full px-4 py-3.5 bg-white border ${errors.name ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-[#002874] focus:ring-[#002874]/20'} rounded-xl focus:outline-none focus:ring-4 transition-all`}
           placeholder="e.g. Abdullah Ahmed"
           {...register('name')}
         />
@@ -103,13 +103,13 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-[#1E293B] mb-2">
+        <label htmlFor="email" className="block text-sm font-medium text-[#000a57] mb-2">
           Email Address
         </label>
         <input
           id="email"
           type="email"
-          className={`w-full px-4 py-3.5 bg-white border ${errors.email ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-[#0F766E] focus:ring-[#0F766E]/20'} rounded-xl focus:outline-none focus:ring-4 transition-all`}
+          className={`w-full px-4 py-3.5 bg-white border ${errors.email ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-[#002874] focus:ring-[#002874]/20'} rounded-xl focus:outline-none focus:ring-4 transition-all`}
           placeholder="e.g. abdullah@example.com"
           {...register('email')}
         />
@@ -117,13 +117,13 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="subject" className="block text-sm font-medium text-[#1E293B] mb-2">
+        <label htmlFor="subject" className="block text-sm font-medium text-[#000a57] mb-2">
           Subject
         </label>
         <input
           id="subject"
           type="text"
-          className={`w-full px-4 py-3.5 bg-white border ${errors.subject ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-[#0F766E] focus:ring-[#0F766E]/20'} rounded-xl focus:outline-none focus:ring-4 transition-all`}
+          className={`w-full px-4 py-3.5 bg-white border ${errors.subject ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-[#002874] focus:ring-[#002874]/20'} rounded-xl focus:outline-none focus:ring-4 transition-all`}
           placeholder="How can we help you?"
           {...register('subject')}
         />
@@ -131,13 +131,13 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-[#1E293B] mb-2">
+        <label htmlFor="message" className="block text-sm font-medium text-[#000a57] mb-2">
           Message
         </label>
         <textarea
           id="message"
           rows={5}
-          className={`w-full px-4 py-3.5 bg-white border ${errors.message ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-[#0F766E] focus:ring-[#0F766E]/20'} rounded-xl focus:outline-none focus:ring-4 transition-all resize-none`}
+          className={`w-full px-4 py-3.5 bg-white border ${errors.message ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-[#002874] focus:ring-[#002874]/20'} rounded-xl focus:outline-none focus:ring-4 transition-all resize-none`}
           placeholder="Tell us more about your inquiry..."
           {...register('message')}
         ></textarea>
@@ -147,7 +147,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full py-4 px-6 bg-[#0F766E] hover:bg-[#0d645d] text-white font-bold rounded-xl transition-all flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-md shadow-[#0F766E]/20"
+        className="w-full py-4 px-6 bg-[#002874] hover:bg-[#000a57] text-white font-bold rounded-xl transition-all flex items-center justify-center space-x-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-md shadow-[#002874]/20"
       >
         {isSubmitting ? (
           <>

@@ -63,28 +63,28 @@ export default async function HomePage() {
       />
 
       {/* 1. Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-[#FFFFFF] to-[#F8FAFC] overflow-hidden pt-24 pb-16 islamic-pattern">
+      <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-[#ffffff] to-[#f8fafc] overflow-hidden pt-24 pb-16 islamic-pattern">
         <div className="container-custom relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#F8FAFC] border border-[#D4AF37]/30 rounded-full text-sm font-medium text-[#1E293B]">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#f8fafc] border border-[#002874]/30 rounded-full text-sm font-medium text-[#000a57]">
               <span className="text-xl">🌟</span> Trusted by 500+ Students Worldwide
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1E293B] leading-tight font-poppins">
-              Learn Quran Online with a <span className="text-[#0F766E]">Certified Personal Teacher</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#000a57] leading-tight font-poppins">
+              Learn Quran Online with a <span className="text-[#002874]">Certified Personal Teacher</span>
             </h1>
-            <p className="text-lg text-[#1E293B]/80 max-w-2xl mx-auto lg:mx-0">
+            <p className="text-lg text-[#000a57]/80 max-w-2xl mx-auto lg:mx-0">
               Master Tajweed and memorization with 1-on-1 personalized online classes designed for your pace. Begin your spiritual journey today.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <Link
                 href="/trial"
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#D4AF37] to-[#B8972E] text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all text-center"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#000a57] to-[#002874] text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all text-center"
               >
                 Book Free Trial
               </Link>
               <Link
                 href="/courses"
-                className="w-full sm:w-auto px-8 py-4 border-2 border-[#0F766E] text-[#0F766E] rounded-full font-semibold hover:bg-[#0F766E] hover:text-white transition-all text-center"
+                className="w-full sm:w-auto px-8 py-4 border-2 border-[#002874] text-[#002874] rounded-full font-semibold hover:bg-[#002874] hover:text-white transition-all text-center"
               >
                 Explore Courses
               </Link>
@@ -92,10 +92,10 @@ export default async function HomePage() {
           </div>
           
           <div className="relative mx-auto w-full max-w-md aspect-square flex items-center justify-center">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0F766E] to-[#D4AF37] rounded-[40px] rotate-3 opacity-20 blur-xl"></div>
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0F766E] to-[#D4AF37] rounded-[40px] -rotate-3 p-1">
-              <div className="w-full h-full bg-[#FFFFFF] rounded-[38px] flex items-center justify-center relative overflow-hidden">
-                <div className="text-9xl font-bold text-[#0F766E]/20">HM</div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#002874] to-[#000a57] rounded-[40px] rotate-3 opacity-20 blur-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#002874] to-[#000a57] rounded-[40px] -rotate-3 p-1">
+              <div className="w-full h-full bg-[#ffffff] rounded-[38px] flex items-center justify-center relative overflow-hidden">
+                <div className="text-9xl font-bold text-[#002874]/20">HM</div>
               </div>
             </div>
           </div>
@@ -103,26 +103,26 @@ export default async function HomePage() {
       </section>
 
       {/* 2. About Me Preview */}
-      <section className="bg-[#FFFFFF] section-padding">
+      <section className="bg-[#ffffff] section-padding">
         <div className="container-custom grid lg:grid-cols-2 gap-12 items-center">
-          <div className="bg-[#0F766E] rounded-3xl p-12 text-white shadow-xl relative overflow-hidden flex flex-col justify-center items-center text-center h-full min-h-[400px]">
+          <div className="bg-[#002874] rounded-3xl p-12 text-white shadow-xl relative overflow-hidden flex flex-col justify-center items-center text-center h-full min-h-[400px]">
             <div className="absolute inset-0 opacity-10 bg-[url('/islamic-pattern.svg')] bg-repeat" />
-            <Award className="w-20 h-20 text-[#D4AF37] mb-6 relative z-10" />
+            <Award className="w-20 h-20 text-gray-200 mb-6 relative z-10" />
             <h3 className="text-3xl font-bold mb-4 relative z-10 font-poppins">Ijazah Certified</h3>
             <p className="text-white/80 text-lg relative z-10">Authorized to teach with a connected chain to the Prophet (PBUH).</p>
           </div>
           
           <div className="space-y-6">
             <SectionHeading title="About Your Teacher" subtitle="A dedicated guide for your Quranic journey" centered={false} />
-            <p className="text-[#1E293B]/80 text-lg leading-relaxed">
+            <p className="text-[#000a57]/80 text-lg leading-relaxed">
               Assalamu Alaikum! I am a passionate and certified Quran teacher dedicated to helping students of all ages connect with the Book of Allah. With years of experience and specialized training in Tajweed and Qira'at, I tailor my teaching approach to suit each student's unique learning style.
             </p>
             <div className="flex flex-wrap gap-3 py-4">
-              <span className="px-4 py-2 bg-[#F8FAFC] text-[#0F766E] rounded-full text-sm font-semibold border border-[#0F766E]/20">8+ Years Experience</span>
-              <span className="px-4 py-2 bg-[#F8FAFC] text-[#0F766E] rounded-full text-sm font-semibold border border-[#0F766E]/20">500+ Students</span>
-              <span className="px-4 py-2 bg-[#F8FAFC] text-[#0F766E] rounded-full text-sm font-semibold border border-[#0F766E]/20">15+ Countries</span>
+              <span className="px-4 py-2 bg-[#f8fafc] text-[#002874] rounded-full text-sm font-semibold border border-[#002874]/20">8+ Years Experience</span>
+              <span className="px-4 py-2 bg-[#f8fafc] text-[#002874] rounded-full text-sm font-semibold border border-[#002874]/20">500+ Students</span>
+              <span className="px-4 py-2 bg-[#f8fafc] text-[#002874] rounded-full text-sm font-semibold border border-[#002874]/20">15+ Countries</span>
             </div>
-            <Link href="/about" className="inline-flex items-center gap-2 text-[#0F766E] font-semibold hover:text-[#0F766E]/80 transition-colors">
+            <Link href="/about" className="inline-flex items-center gap-2 text-[#002874] font-semibold hover:text-[#002874]/80 transition-colors">
               Read More About Me <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -130,17 +130,17 @@ export default async function HomePage() {
       </section>
 
       {/* 3. Why Learn With Me */}
-      <section className="bg-[#F8FAFC] section-padding">
+      <section className="bg-[#f8fafc] section-padding">
         <div className="container-custom">
           <SectionHeading title="Why Learn With Me" subtitle="Experience premium Quran education tailored just for you" centered={true} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {features.map((feature, idx) => (
-              <div key={idx} className="bg-[#FFFFFF] rounded-2xl p-8 shadow-premium card-hover border border-gray-100">
-                <div className="w-14 h-14 bg-[#0F766E] rounded-full flex items-center justify-center mb-6 shadow-md">
-                  <feature.icon className="w-7 h-7 text-[#FFFFFF]" />
+              <div key={idx} className="bg-[#ffffff] rounded-2xl p-8 shadow-premium card-hover border border-gray-100">
+                <div className="w-14 h-14 bg-[#002874] rounded-full flex items-center justify-center mb-6 shadow-md">
+                  <feature.icon className="w-7 h-7 text-[#ffffff]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#1E293B] mb-3 font-poppins">{feature.title}</h3>
-                <p className="text-[#1E293B]/70">{feature.description}</p>
+                <h3 className="text-xl font-bold text-[#000a57] mb-3 font-poppins">{feature.title}</h3>
+                <p className="text-[#000a57]/70">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -148,7 +148,7 @@ export default async function HomePage() {
       </section>
 
       {/* 4. Courses Overview */}
-      <section className="bg-[#FFFFFF] section-padding">
+      <section className="bg-[#ffffff] section-padding">
         <div className="container-custom">
           <SectionHeading title="Popular Courses" subtitle="Structured learning paths for every level" centered={true} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -157,7 +157,7 @@ export default async function HomePage() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link href="/courses" className="inline-flex px-8 py-3 bg-[#0F766E] text-white rounded-full font-semibold hover:bg-[#0F766E]/90 transition-all">
+            <Link href="/courses" className="inline-flex px-8 py-3 bg-[#002874] text-white rounded-full font-semibold hover:bg-[#002874]/90 transition-all">
               View All Courses
             </Link>
           </div>
@@ -165,25 +165,25 @@ export default async function HomePage() {
       </section>
 
       {/* 5. Teaching Method */}
-      <section className="bg-[#F8FAFC] section-padding">
+      <section className="bg-[#f8fafc] section-padding">
         <div className="container-custom">
           <SectionHeading title="My Teaching Method" subtitle="A simple and effective learning journey" centered={true} />
           
           <div className="mt-16 relative">
             {/* Desktop connecting line */}
-            <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-1 bg-gradient-to-r from-[#0F766E]/20 via-[#0F766E]/50 to-[#0F766E]/20" />
+            <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-1 bg-gradient-to-r from-[#002874]/20 via-[#002874]/50 to-[#002874]/20" />
             
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 relative">
               {teachingSteps.map((step, idx) => (
                 <div key={idx} className="relative flex flex-col items-center text-center group">
-                  <div className="w-20 h-20 bg-[#FFFFFF] rounded-full flex items-center justify-center shadow-lg border-4 border-[#F8FAFC] relative z-10 mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <step.icon className="w-8 h-8 text-[#0F766E]" />
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#D4AF37] rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md">
+                  <div className="w-20 h-20 bg-[#ffffff] rounded-full flex items-center justify-center shadow-lg border-4 border-[#f8fafc] relative z-10 mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <step.icon className="w-8 h-8 text-[#002874]" />
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#000a57] rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md">
                       {idx + 1}
                     </div>
                   </div>
-                  <h4 className="text-xl font-bold text-[#1E293B] mb-3 font-poppins">{step.title}</h4>
-                  <p className="text-[#1E293B]/70">{step.description}</p>
+                  <h4 className="text-xl font-bold text-[#000a57] mb-3 font-poppins">{step.title}</h4>
+                  <p className="text-[#000a57]/70">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -192,7 +192,7 @@ export default async function HomePage() {
       </section>
 
       {/* 6. Student Statistics */}
-      <section className="bg-gradient-to-r from-[#0F766E] to-[#0d665f] text-white section-padding relative overflow-hidden islamic-pattern">
+      <section className="bg-gradient-to-r from-[#000a57] to-[#002874] text-white section-padding relative overflow-hidden islamic-pattern">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container-custom relative z-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -204,7 +204,7 @@ export default async function HomePage() {
       </section>
 
       {/* 7. Countries Served */}
-      <section className="bg-[#FFFFFF] section-padding">
+      <section className="bg-[#ffffff] section-padding">
         <div className="container-custom">
           <SectionHeading title="Global Reach" subtitle="Teaching students from around the world" centered={true} />
           <div className="mt-12">
@@ -214,7 +214,7 @@ export default async function HomePage() {
       </section>
 
       {/* 8. Testimonials */}
-      <section className="bg-[#F8FAFC] section-padding">
+      <section className="bg-[#f8fafc] section-padding">
         <div className="container-custom">
           <SectionHeading title="Student Success Stories" subtitle="Read what my students have to say" centered={true} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -223,7 +223,7 @@ export default async function HomePage() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link href="/testimonials" className="inline-flex items-center gap-2 text-[#0F766E] font-semibold hover:text-[#0F766E]/80 transition-colors">
+            <Link href="/testimonials" className="inline-flex items-center gap-2 text-[#002874] font-semibold hover:text-[#002874]/80 transition-colors">
               View All Testimonials <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -231,7 +231,7 @@ export default async function HomePage() {
       </section>
 
       {/* 9. FAQ */}
-      <section className="bg-[#FFFFFF] section-padding">
+      <section className="bg-[#ffffff] section-padding">
         <div className="container-custom">
           <SectionHeading title="Frequently Asked Questions" subtitle="Everything you need to know about learning with me" centered={true} />
           <div className="max-w-3xl mx-auto mt-12">

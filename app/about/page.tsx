@@ -31,7 +31,7 @@ export default function AboutPage() {
       />
       <main className="min-h-screen">
         {/* Hero Banner */}
-        <section className="bg-gradient-to-r from-teal-900 to-teal-700 text-white py-20 islamic-pattern">
+        <section className="bg-gradient-to-r from-[#000a57] to-[#002874] text-white py-20 islamic-pattern">
           <div className="container-custom relative z-10">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 font-poppins">About Me</h1>
             <div className="flex items-center text-sm md:text-base opacity-90">
@@ -45,10 +45,10 @@ export default function AboutPage() {
         {/* Biography */}
         <section className="py-20 bg-white">
           <div className="container-custom grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative rounded-2xl bg-teal-800 p-8 text-white min-h-[400px] flex flex-col justify-end shadow-xl overflow-hidden">
+            <div className="relative rounded-2xl bg-[#002874] p-8 text-white min-h-[400px] flex flex-col justify-end shadow-xl overflow-hidden">
               <div className="absolute inset-0 opacity-20 islamic-pattern"></div>
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-[#D4AF37] mb-2 font-poppins">Hafiz Muhammad</h3>
+                <h3 className="text-2xl font-bold text-gray-200 mb-2 font-poppins">Hafiz Muhammad</h3>
                 <p className="text-lg">Certified Online Quran Tutor</p>
                 <div className="mt-4 flex gap-4">
                   <div className="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
@@ -87,7 +87,7 @@ export default function AboutPage() {
         <section className="py-20 bg-slate-50 text-center">
           <div className="container-custom max-w-4xl">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 font-poppins">My Mission</h2>
-            <p className="text-xl md:text-2xl text-teal-800 italic leading-relaxed">
+            <p className="text-xl md:text-2xl text-[#002874] italic leading-relaxed">
               "My mission is to make quality Quran education accessible to every Muslim around the world, regardless of their location, age, or background."
             </p>
           </div>
@@ -99,8 +99,8 @@ export default function AboutPage() {
             <SectionHeading title="Teaching Philosophy" subtitle="How I approach Quran education" />
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="p-8 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mb-6">
-                  <Heart className="w-7 h-7 text-teal-600" />
+                <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-6">
+                  <Heart className="w-7 h-7 text-[#002874]" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3 font-poppins">Patience &amp; Understanding</h3>
                 <p className="text-slate-600">
@@ -108,8 +108,8 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="p-8 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mb-6">
-                  <Target className="w-7 h-7 text-teal-600" />
+                <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-6">
+                  <Target className="w-7 h-7 text-[#002874]" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3 font-poppins">Personalized Approach</h3>
                 <p className="text-slate-600">
@@ -117,8 +117,8 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="p-8 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mb-6">
-                  <Mic className="w-7 h-7 text-teal-600" />
+                <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mb-6">
+                  <Mic className="w-7 h-7 text-[#002874]" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3 font-poppins">Excellence in Tajweed</h3>
                 <p className="text-slate-600">
@@ -143,7 +143,7 @@ export default function AboutPage() {
                   "Certified Online Quran Tutor for Non-Arabic Speakers"
                 ].map((qual, index) => (
                   <li key={index} className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 text-[#002874] flex-shrink-0 mt-1" />
                     <span className="text-lg text-slate-700 font-medium">{qual}</span>
                   </li>
                 ))}
@@ -165,13 +165,13 @@ export default function AboutPage() {
                 { year: "2024", title: "500+ Students from 15+ Countries", desc: "Continuing the mission of spreading Quranic knowledge globally." }
               ].map((item, index) => (
                 <div key={index} className={`relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active mb-10 last:mb-0`}>
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-teal-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-[#002874] text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                   <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-shadow">
                     <div className="flex items-center justify-between mb-2">
                       <h4 className="font-bold text-slate-900 text-lg font-poppins">{item.title}</h4>
-                      <span className="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-semibold">{item.year}</span>
+                      <span className="px-3 py-1 bg-gray-100 text-[#002874] rounded-full text-sm font-semibold">{item.year}</span>
                     </div>
                     <p className="text-slate-600">{item.desc}</p>
                   </div>
@@ -192,7 +192,7 @@ export default function AboutPage() {
                 { lang: "Arabic", level: "Proficient" }
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-4 bg-white px-8 py-5 rounded-xl shadow-sm border border-slate-100">
-                  <Globe className="w-8 h-8 text-teal-600" />
+                  <Globe className="w-8 h-8 text-[#002874]" />
                   <div>
                     <h4 className="text-lg font-bold text-slate-900 font-poppins">{item.lang}</h4>
                     <p className="text-slate-500 text-sm">{item.level}</p>

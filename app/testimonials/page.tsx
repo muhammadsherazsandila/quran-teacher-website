@@ -42,16 +42,16 @@ export default async function TestimonialsPage() {
       />
       
       {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-primary to-teal-800 text-white py-16 md:py-24 px-4 relative overflow-hidden">
+      <section className="bg-gradient-to-r from-[#000a57] to-[#002874] text-white py-16 md:py-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('/islamic-pattern.svg')] bg-repeat opacity-5"></div>
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">What Our Students Say</h1>
-          <div className="flex items-center justify-center space-x-2 text-teal-100 text-sm font-medium">
+          <div className="flex items-center justify-center space-x-2 text-gray-200 text-sm font-medium">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <span className="text-accent">Testimonials</span>
           </div>
-          <p className="mt-6 text-lg max-w-2xl mx-auto text-teal-50">
+          <p className="mt-6 text-lg max-w-2xl mx-auto text-gray-200">
             Join thousands of satisfied students from over 15 countries who have transformed their Quran learning journey with us.
           </p>
         </div>
@@ -146,7 +146,7 @@ export default async function TestimonialsPage() {
           
           <div className="bg-white rounded-3xl shadow-md overflow-hidden border border-gray-100">
             <div className="p-8 md:p-10">
-              <div className="bg-accent/10 text-accent-dark px-4 py-1.5 rounded-full inline-block text-sm font-semibold mb-6 text-yellow-700">Tajweed Mastery</div>
+              <div className="bg-gray-100 text-[#002874] px-4 py-1.5 rounded-full inline-block text-sm font-semibold mb-6">Tajweed Mastery</div>
               <h3 className="text-2xl font-bold text-text mb-4">Perfecting Pronunciation</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
                 "I struggled with proper Tajweed rules for years. Joining the advanced Tajweed course completely changed my recitation. The interactive feedback from my Egyptian tutor helped me identify and correct subtle mistakes I was making. It's truly a blessing to be able to recite the Quran the way it was revealed."

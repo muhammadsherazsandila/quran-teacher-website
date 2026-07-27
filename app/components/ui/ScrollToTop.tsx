@@ -36,7 +36,7 @@ export default function ScrollToTop() {
           exit={{ opacity: 0, scale: 0.5 }}
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className="fixed bottom-6 right-24 z-40 p-3 bg-[#0F766E] text-white rounded-full shadow-lg hover:bg-[#0A5C55] transition-colors hover:scale-110"
+          className="fixed bottom-6 right-24 z-40 p-3 bg-[#002874] text-white rounded-full shadow-lg hover:bg-[#000a57] transition-colors hover:scale-110"
         >
           <ChevronUp className="w-6 h-6" />
         </motion.button>

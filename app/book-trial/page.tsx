@@ -70,20 +70,20 @@ export default function BookTrialPage() {
       />
 
       {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-primary to-teal-800 text-white py-16 md:py-20 px-4 relative overflow-hidden">
+      <section className="bg-gradient-to-r from-[#000a57] to-[#002874] text-white py-16 md:py-20 px-4 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('/islamic-pattern.svg')] bg-repeat opacity-5"></div>
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Book Your Free Trial Class
           </h1>
-          <div className="flex items-center justify-center space-x-2 text-teal-100 text-sm font-medium">
+          <div className="flex items-center justify-center space-x-2 text-gray-200 text-sm font-medium">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
             <span>/</span>
             <span className="text-accent">Book Trial</span>
           </div>
-          <p className="mt-6 text-lg max-w-2xl mx-auto text-teal-50">
+          <p className="mt-6 text-lg max-w-2xl mx-auto text-gray-200">
             Take the first step towards mastering the Quran. Schedule your free
             evaluation session with one of our certified tutors today.
           </p>
@@ -127,7 +127,8 @@ export default function BookTrialPage() {
                 Prefer WhatsApp?
               </h3>
               <p className="text-green-700 mb-6 text-sm">
-                Our support team is online and ready to help you schedule your trial class directly via WhatsApp.
+                Our support team is online and ready to help you schedule your
+                trial class directly via WhatsApp.
               </p>
               <a
                 href="https://wa.me/1234567890"

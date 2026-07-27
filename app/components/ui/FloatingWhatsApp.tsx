@@ -14,7 +14,7 @@ export default function FloatingWhatsApp() {
     >
       <div className="relative group">
         {/* Tooltip */}
-        <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white text-[#1E293B] text-sm font-medium py-2 px-3 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+        <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white text-[#000a57] text-sm font-medium py-2 px-3 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
           Chat on WhatsApp
           <div className="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 bg-white rotate-45" />
         </div>
