@@ -11,7 +11,7 @@ export default function CTABanner() {
           Ready to Start Your Quran Journey?
         </h2>
         <p className="text-lg md:text-xl text-[#f8fafc] max-w-2xl mx-auto mb-10 opacity-90">
-          Join our global community of learners and enrich your life with the teachings of the Holy Quran. Start with a free 3-day trial.
+          Join Al Jameel Academy and enrich your life with the teachings of the Holy Quran. Start with a free 3-day trial with our certified teacher.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -22,7 +22,7 @@ export default function CTABanner() {
             Book Free Trial
           </Link>
           <Link 
-            href="https://wa.me/923001234567" 
+            href="https://wa.me/923026188597" 
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg transition-colors hover:bg-white/10"

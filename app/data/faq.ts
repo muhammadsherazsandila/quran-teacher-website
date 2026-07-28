@@ -12,12 +12,12 @@ export const homeFAQ: FAQItem[] = [
   {
     question: "What age groups do you teach?",
     answer:
-      "I teach students of all ages, from children as young as 4 years old to adults and seniors. Each lesson is adapted to the student's age, learning style, and pace to ensure the most effective learning experience.",
+      "We teach students of all ages, from children as young as 4 years old to adults and seniors. Each lesson is adapted to the student's age, learning style, and pace to ensure the most effective learning experience.",
   },
   {
     question: "Do you offer a free trial class?",
     answer:
-      "Yes! I offer a completely free trial class with no obligation. This gives you or your child the opportunity to experience my teaching style, assess the learning environment, and decide if it's the right fit before committing.",
+      "Yes! We offer a completely free trial class with no obligation. This gives you or your child the opportunity to experience our teaching style, assess the learning environment, and decide if it's the right fit before committing.",
   },
   {
     question: "What is the class schedule and timing?",
@@ -27,22 +27,27 @@ export const homeFAQ: FAQItem[] = [
   {
     question: "How much do the classes cost?",
     answer:
-      "I offer competitive and affordable pricing plans. The exact fee depends on the number of classes per week and the course type. Please book a free trial class or contact me via WhatsApp to discuss pricing details.",
+      "We offer competitive and affordable pricing plans. The exact fee depends on the number of classes per week and the course type. Please book a free trial class or contact us via WhatsApp to discuss pricing details.",
   },
   {
     question: "What qualifications do you have?",
     answer:
-      "I hold an Ijazah (certificate of authorization) in Quran recitation with Tajweed, along with years of formal Islamic education. I have over 8 years of experience teaching students from more than 15 countries worldwide.",
+      "Our teacher holds an Ijazah (certificate of authorization) in Quran recitation with Tajweed, along with years of formal Islamic education, and has over 8 years of experience teaching students from more than 15 countries worldwide.",
   },
   {
     question: "Can I change my class schedule?",
     answer:
-      "Absolutely! I understand that schedules can change. You can adjust your class timings with reasonable notice. I strive to be as flexible as possible to accommodate my students' needs.",
+      "Absolutely! We understand that schedules can change. You can adjust your class timings with reasonable notice. We strive to be as flexible as possible to accommodate our students' needs.",
   },
   {
     question: "How do you track student progress?",
     answer:
-      "I maintain detailed progress reports for each student and share regular updates with parents. You'll receive monthly progress reports highlighting achievements, areas of improvement, and the plan for the coming month.",
+      "We maintain detailed progress reports for each student and share regular updates with parents. You'll receive monthly progress reports highlighting achievements, areas of improvement, and the plan for the coming month.",
+  },
+  {
+    question: "Can female students join?",
+    answer:
+      "Yes, absolutely! Al Jameel Online Quran Academy has a dedicated female teacher, making our classes especially comfortable and suitable for sisters and children.",
   },
 ];
 

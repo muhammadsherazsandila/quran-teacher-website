@@ -45,7 +45,7 @@ export default function CoursesPage() {
       ))}
       <main className="min-h-screen">
         {/* Hero Banner */}
-        <section className="bg-gradient-to-r from-[#000a57] to-[#002874] text-white py-20 islamic-pattern">
+        <section className="bg-gradient-to-r from-[#000a57] to-[#002874] text-white py-16 md:py-20 islamic-pattern">
           <div className="container-custom relative z-10">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 font-poppins">Our Courses</h1>
             <div className="flex items-center text-sm md:text-base opacity-90">
@@ -77,7 +77,7 @@ export default function CoursesPage() {
                   <p className="text-slate-600 text-lg leading-relaxed mb-8">
                     {course.description}
                   </p>
-                  <Link href="/free-trial" className="inline-flex items-center justify-center px-6 py-3 bg-[#002874] text-white rounded-lg font-medium hover:bg-[#000a57] transition-colors">
+                  <Link href="/book-trial" className="inline-flex items-center justify-center px-6 py-3 bg-[#002874] text-white rounded-lg font-medium hover:bg-[#000a57] transition-colors">
                     Start Free Trial
                   </Link>
                 </div>

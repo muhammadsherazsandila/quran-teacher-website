@@ -16,19 +16,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!post) {
     return {
-      title: 'Post Not Found | Quran Tutor',
+      title: 'Post Not Found | Al Jameel Academy',
     };
   }
 
   return {
-    title: `${post.title} | Quran Tutor Blog`,
+    title: `${post.title} | Al Jameel Academy Blog`,
     description: post.excerpt,
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: 'article',
       publishedTime: post.date,
-      authors: ['Hafiz Muhammad'],
+      authors: ['Al Jameel Online Quran Academy'],
       tags: [post.category],
     },
     twitter: {
@@ -63,8 +63,8 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.title,
     datePublished: post.date,
     author: {
-      '@type': 'Person',
-      name: 'Hafiz Muhammad',
+      '@type': 'Organization',
+      name: 'Al Jameel Online Quran Academy',
     },
   };
 
@@ -113,7 +113,7 @@ export default async function BlogPostPage({ params }: Props) {
       />
 
       {/* Hero Header */}
-      <section className="bg-gradient-to-r from-[#000a57] to-[#002874] pt-24 pb-32 text-white relative islamic-pattern">
+      <section className="bg-gradient-to-r from-[#000a57] to-[#002874] pt-16 pb-32 md:pt-20 md:pb-36 text-white relative islamic-pattern">
         <div className="container-custom max-w-4xl relative z-10">
           <div className="flex items-center text-sm font-medium mb-8 opacity-90 text-white/80">
             <Link href="/" className="hover:text-accent transition-colors">Home</Link>
@@ -136,7 +136,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="flex flex-wrap items-center gap-6 text-white/90 text-sm md:text-base">
             <div className="flex items-center">
               <User className="w-5 h-5 mr-2 text-accent" />
-              <span className="font-medium">Hafiz Muhammad</span>
+              <span className="font-medium">Al Jameel Academy</span>
             </div>
             <div className="flex items-center">
               <Calendar className="w-5 h-5 mr-2 text-accent" />

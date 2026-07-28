@@ -7,7 +7,7 @@ import BlogCard from '@/app/components/ui/BlogCard';
 
 export const metadata = generatePageMetadata(
   'Blog',
-  'Read articles about Quran learning, Tajweed tips, Islamic education, and parenting advice from an experienced Quran teacher.',
+  'Read articles about Quran learning, Tajweed tips, Islamic education, and parenting advice from Al Jameel Online Quran Academy.',
   '/blog'
 );
 
@@ -28,7 +28,7 @@ export default function BlogPage() {
       />
 
       {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-[#000a57] to-[#002874] py-20 text-white relative overflow-hidden">
+      <section className="bg-gradient-to-r from-[#000a57] to-[#002874] py-16 md:py-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('/islamic-pattern.svg')] bg-repeat opacity-5"></div>
         <div className="container-custom relative z-10 text-center">
           <div className="flex items-center justify-center text-sm font-medium mb-6 opacity-80">

@@ -1,12 +1,13 @@
-const SITE_URL = "https://qurantutor.com";
-const TEACHER_NAME = "Hafiz Muhammad";
+const SITE_URL = "https://aljameelacademy.com";
+const TEACHER_NAME = "Al Jameel Online Quran Academy";
 
 export function generatePersonSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: TEACHER_NAME,
-    jobTitle: "Online Quran Teacher",
+    name: "Online Quran Teacher at Al Jameel Academy",
+    jobTitle: "Quran Teacher",
+    gender: "Female",
     description:
       "Experienced and certified online Quran teacher offering personalized 1-on-1 Quran classes for students of all ages worldwide. Specializing in Noorani Qaida, Quran Reading, Tajweed, Memorization, and Islamic Studies.",
     url: SITE_URL,
@@ -23,14 +24,10 @@ export function generateOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    name: `${TEACHER_NAME} - Online Quran Teacher`,
+    name: "Al Jameel Online Quran Academy",
     url: SITE_URL,
     description:
-      "Personal online Quran teaching service offering 1-on-1 classes for students worldwide.",
-    founder: {
-      "@type": "Person",
-      name: TEACHER_NAME,
-    },
+      "Al Jameel Online Quran Academy offers expert online Quran teaching services with 1-on-1 classes for students worldwide.",
     areaServed: [
       "United States",
       "United Kingdom",
@@ -54,8 +51,8 @@ export function generateCourseSchema(course: {
     name: course.title,
     description: course.description,
     provider: {
-      "@type": "Person",
-      name: TEACHER_NAME,
+      "@type": "EducationalOrganization",
+      name: "Al Jameel Online Quran Academy",
       url: SITE_URL,
     },
     educationalLevel: course.level,

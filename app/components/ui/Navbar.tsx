@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { BookOpen, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
+  { name: "Our Teacher", path: "/teacher" },
   { name: "Courses", path: "/courses" },
   { name: "Testimonials", path: "/testimonials" },
   { name: "Blog", path: "/blog" },
@@ -35,14 +36,8 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 z-50">
-          <BookOpen
-            className={`w-8 h-8 ${scrolled ? "text-[#002874]" : "text-[#002874]"}`}
-          />
-          <span
-            className={`text-xl font-bold ${scrolled ? "text-[#000a57]" : "text-[#000a57]"}`}
-          >
-            Hafiz Muhammad
-          </span>
+          {/* logo png image */}
+          <img src="/logo.png" alt="Logo" className="h-12" />
         </Link>
 
         {/* Desktop Nav */}

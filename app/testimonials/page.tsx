@@ -21,13 +21,13 @@ export default async function TestimonialsPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://qurantutor.example.com/',
+        item: 'https://aljameelacademy.com/',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Testimonials',
-        item: 'https://qurantutor.example.com/testimonials',
+        item: 'https://aljameelacademy.com/testimonials',
       },
     ],
   };
@@ -35,14 +35,14 @@ export default async function TestimonialsPage() {
   const parentReviews = testimonials.filter((t) => t.type === 'parent');
 
   return (
-    <main className="min-h-screen pt-20">
+    <main className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       
       {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-[#000a57] to-[#002874] text-white py-16 md:py-24 px-4 relative overflow-hidden">
+      <section className="bg-gradient-to-r from-[#000a57] to-[#002874] text-white py-16 md:py-20 px-4 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('/islamic-pattern.svg')] bg-repeat opacity-5"></div>
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">What Our Students Say</h1>

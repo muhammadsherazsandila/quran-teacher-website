@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { MessageCircle } from 'lucide-react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import { MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function FloatingWhatsApp() {
   return (
@@ -24,7 +24,7 @@ export default function FloatingWhatsApp() {
 
         {/* Button */}
         <Link
-          href="https://wa.me/923001234567?text=Assalamu%20Alaikum!%20I%27m%20interested%20in%20online%20Quran%20classes."
+          href="https://wa.me/923026188597?text=Assalamu%20Alaikum!%20I%27m%20interested%20in%20online%20Quran%20classes%20at%20Al%20Jameel%20Academy."
           target="_blank"
           rel="noopener noreferrer"
           className="relative flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-xl hover:scale-110 transition-transform"

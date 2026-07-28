@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 
-const SITE_URL = "https://qurantutor.com";
-const SITE_NAME = "Hafiz Muhammad - Online Quran Teacher";
+const SITE_URL = "https://aljameelacademy.com";
+const SITE_NAME = "Al Jameel Online Quran Academy";
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Learn Quran Online | Personal Quran Teacher - Hafiz Muhammad",
-    template: "%s | Hafiz Muhammad - Online Quran Teacher",
+    default: "Learn Quran Online | Al Jameel Online Quran Academy",
+    template: "%s | Al Jameel Online Quran Academy",
   },
   description:
-    "Learn Quran online with a certified personal Quran teacher. 1-on-1 classes for kids & adults. Noorani Qaida, Tajweed, Memorization & Islamic Studies. Book your free trial today!",
+    "Learn Quran online with Al Jameel Online Quran Academy. Expert female teacher offering 1-on-1 classes for kids & adults. Noorani Qaida, Tajweed, Memorization & Islamic Studies. Book your free trial today!",
   keywords: [
+    "al jameel quran academy",
+    "al jameel online quran academy",
     "Online Quran Teacher",
     "Learn Quran Online",
     "Quran Tutor",
@@ -30,12 +32,12 @@ export const defaultMetadata: Metadata = {
     "Quran Classes Canada",
     "Quran Classes Australia",
   ],
-  authors: [{ name: "Hafiz Muhammad" }],
-  creator: "Hafiz Muhammad",
+  authors: [{ name: "Al Jameel Online Quran Academy" }],
+  creator: "Al Jameel Online Quran Academy",
   openGraph: {
-    title: "Learn Quran Online | Personal Quran Teacher - Hafiz Muhammad",
+    title: "Learn Quran Online | Al Jameel Online Quran Academy",
     description:
-      "1-on-1 online Quran classes with a certified teacher. Noorani Qaida, Tajweed, Memorization & Islamic Studies. Students from 15+ countries. Book your free trial!",
+      "1-on-1 online Quran classes with our expert female teacher at Al Jameel Online Quran Academy. Noorani Qaida, Tajweed, Memorization & Islamic Studies. Book your free trial!",
     url: SITE_URL,
     siteName: SITE_NAME,
     locale: "en_US",
@@ -43,9 +45,9 @@ export const defaultMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Learn Quran Online | Personal Quran Teacher",
+    title: "Learn Quran Online | Al Jameel Online Quran Academy",
     description:
-      "1-on-1 online Quran classes with a certified teacher. Book your free trial today!",
+      "1-on-1 online Quran classes with our expert female teacher. Book your free trial today!",
   },
   robots: {
     index: true,

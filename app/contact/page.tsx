@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const metadata = generatePageMetadata(
   'Contact Us',
-  'Get in touch with an experienced Quran teacher for online classes. We are available for students worldwide.',
+  'Get in touch with Al Jameel Online Quran Academy for online classes. We are available for students worldwide.',
   '/contact'
 );
 
@@ -14,8 +14,8 @@ export default function ContactPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://qurantutor.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://qurantutor.com/contact" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aljameelacademy.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://aljameelacademy.com/contact" }
     ]
   };
 
@@ -27,7 +27,7 @@ export default function ContactPage() {
       />
       
       {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-[#000a57] to-[#002874] pt-24 pb-32 text-white relative">
+      <section className="bg-gradient-to-r from-[#000a57] to-[#002874] pt-16 pb-32 md:pt-20 md:pb-36 text-white relative">
         <div className="absolute inset-0 bg-[url('/islamic-pattern.svg')] opacity-5"></div>
         <div className="container mx-auto px-4 max-w-7xl relative z-10 text-center">
           <div className="flex items-center justify-center text-sm font-medium mb-6 opacity-80 text-white/80">
@@ -51,8 +51,8 @@ export default function ContactPage() {
             </div>
             <h3 className="text-xl font-bold text-[#000a57] mb-2 font-[family-name:--font-poppins]">WhatsApp</h3>
             <p className="text-gray-600 mb-4">Quick responses within 1 hour</p>
-            <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" className="text-[#002874] font-bold text-lg hover:text-[#000a57] transition-colors">
-              +92 300 1234567
+            <a href="https://wa.me/923026188597" target="_blank" rel="noopener noreferrer" className="text-[#002874] font-bold text-lg hover:text-[#000a57] transition-colors">
+              +92 302 6188597
             </a>
           </div>
 
@@ -62,8 +62,8 @@ export default function ContactPage() {
             </div>
             <h3 className="text-xl font-bold text-[#000a57] mb-2 font-[family-name:--font-poppins]">Email Us</h3>
             <p className="text-gray-600 mb-4">For detailed inquiries and support</p>
-            <a href="mailto:info@qurantutor.com" className="text-[#002874] font-bold text-lg hover:text-[#000a57] transition-colors">
-              info@qurantutor.com
+            <a href="mailto:info@aljameelacademy.com" className="text-[#002874] font-bold text-lg hover:text-[#000a57] transition-colors">
+              info@aljameelacademy.com
             </a>
           </div>
 

@@ -24,13 +24,13 @@ export default function BookTrialPage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://qurantutor.example.com/",
+        item: "https://aljameelacademy.com/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Book Trial",
-        item: "https://qurantutor.example.com/book-trial",
+        item: "https://aljameelacademy.com/book-trial",
       },
     ],
   };
@@ -63,7 +63,7 @@ export default function BookTrialPage() {
   ];
 
   return (
-    <main className="min-h-screen pt-20">
+    <main className="min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -131,7 +131,7 @@ export default function BookTrialPage() {
                 trial class directly via WhatsApp.
               </p>
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/923026188597"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-4 rounded-full font-bold hover:bg-green-600 transition shadow-lg hover:shadow-xl w-full"

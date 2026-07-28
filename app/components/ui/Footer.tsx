@@ -10,10 +10,10 @@ export default function Footer() {
           {/* Column 1: Brand Info */}
           <div>
             <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              Hafiz Muhammad
+              Al Jameel Online Quran Academy
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Dedicated to spreading the light of the Quran through interactive, personalized online classes for students of all ages worldwide.
+              An institutional online academy dedicated to spreading the light of the Quran through interactive, personalized classes for students of all ages worldwide, guided by our certified instructor.
             </p>
             <div className="flex gap-4">
               <Link href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#002874] transition-colors">
@@ -41,6 +41,7 @@ export default function Footer() {
               {[
                 { name: 'Home', path: '/' },
                 { name: 'About', path: '/about' },
+                { name: 'Our Teacher', path: '/teacher' },
                 { name: 'Courses', path: '/courses' },
                 { name: 'Testimonials', path: '/testimonials' },
                 { name: 'Blog', path: '/blog' },
@@ -83,14 +84,14 @@ export default function Footer() {
                 <Phone className="w-5 h-5 text-[#002874] mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-white font-medium">Phone / WhatsApp</p>
-                  <p className="text-gray-300">+92 300 1234567</p>
+                  <p className="text-gray-300">+92 302 6188597</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-[#002874] mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-white font-medium">Email</p>
-                  <p className="text-gray-300">info@qurantutor.com</p>
+                  <p className="text-gray-300">info@aljameelacademy.com</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -113,7 +114,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Hafiz Muhammad. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Al Jameel Online Quran Academy. All Rights Reserved.</p>
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
