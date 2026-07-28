@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Phone, Mail, Clock, MapPin } from 'lucide-react';
-import { FaFacebookF, FaTiktok, FaYoutube, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -16,21 +16,15 @@ export default function Footer() {
               An institutional online academy dedicated to spreading the light of the Quran through interactive, personalized classes for students of all ages worldwide, guided by our certified instructor.
             </p>
             <div className="flex gap-4">
-              <Link href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#002874] transition-colors">
-                <FaFacebookF className="w-5 h-5 text-white" />
-              </Link>
-              <Link href="#" aria-label="TikTok" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#002874] transition-colors">
-                <FaTiktok className="w-5 h-5 text-white" />
-              </Link>
-              <Link href="#" aria-label="YouTube" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#002874] transition-colors">
-                <FaYoutube className="w-5 h-5 text-white" />
-              </Link>
-              <Link href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#002874] transition-colors">
-                <FaInstagram className="w-5 h-5 text-white" />
-              </Link>
-              <Link href="#" aria-label="WhatsApp" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#002874] transition-colors">
+              <a
+                href="https://wa.me/923026188597"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#25D366] transition-colors"
+              >
                 <FaWhatsapp className="w-5 h-5 text-white" />
-              </Link>
+              </a>
             </div>
           </div>
 
