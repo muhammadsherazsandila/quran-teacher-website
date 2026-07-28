@@ -39,6 +39,14 @@ export const defaultMetadata: Metadata = {
     description:
       "1-on-1 online Quran classes with our expert female teacher at Al Jameel Online Quran Academy. Noorani Qaida, Tajweed, Memorization & Islamic Studies. Book your free trial!",
     url: SITE_URL,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Al Jameel Online Quran Academy",
+      },
+    ],
     siteName: SITE_NAME,
     locale: "en_US",
     type: "website",
@@ -68,7 +76,7 @@ export const defaultMetadata: Metadata = {
 export function generatePageMetadata(
   title: string,
   description: string,
-  path: string
+  path: string,
 ): Metadata {
   return {
     title,
