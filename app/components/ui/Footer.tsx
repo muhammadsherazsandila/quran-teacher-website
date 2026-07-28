@@ -85,7 +85,12 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-[#002874] mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-white font-medium">Email</p>
-                  <p className="text-gray-300">info@aljameelacademy.com</p>
+                  <a
+                    href="mailto:aaljameelinternationalquranaca@gmail.com"
+                    className="text-gray-300 hover:text-white transition-colors break-all"
+                  >
+                    aaljameelinternationalquranaca@gmail.com
+                  </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">

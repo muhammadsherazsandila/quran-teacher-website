@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { CheckCircle2, Loader2, Send } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { CheckCircle2, Loader2, Send } from "lucide-react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
 
 const formSchema = z.object({
-  name: z.string().min(2, 'Name is required'),
-  email: z.string().email('Please enter a valid email address'),
-  subject: z.string().min(5, 'Subject is required'),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
+  name: z.string().min(2, "Name is required"),
+  email: z.string().email("Please enter a valid email address"),
+  subject: z.string().min(5, "Subject is required"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -19,50 +19,56 @@ type FormValues = z.infer<typeof formSchema>;
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
+  const [errorMsg, setErrorMsg] = useState("");
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
   });
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    setErrorMsg('');
-    
+    setErrorMsg("");
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setIsSubmitting(false);
+      setErrorMsg("Email service is not configured. Please try again later.");
+      return;
+    }
+
     try {
-      if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID) {
-        // Fallback to simulation if keys are missing
-        console.log('Simulation mode (no EmailJS keys provided)', data);
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-      } else {
-        await emailjs.send(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
+      await emailjs
+        .send(
+          serviceId,
+          templateId,
           {
             from_name: data.name,
             from_email: data.email,
             subject: data.subject,
             message: data.message,
           },
-          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
-        );
-      }
-      
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      reset();
-      
+          publicKey,
+        )
+        .then((res) => {
+          console.log("Email sent successfully:", res);
+          setIsSubmitting(false);
+          setIsSuccess(true);
+          reset();
+        });
+
       // Reset success message after 5 seconds
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (error) {
-      console.error('Failed to send email:', error);
+      console.error("Failed to send email:", error);
       setIsSubmitting(false);
-      setErrorMsg('Failed to send message. Please try again later.');
+      setErrorMsg("Failed to send message. Please try again later.");
     }
   };
 
@@ -72,11 +78,14 @@ export default function ContactForm() {
         <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
           <CheckCircle2 className="w-8 h-8" />
         </div>
-        <h3 className="text-2xl font-bold text-[#000a57] mb-2 font-[family-name:--font-poppins]">Message Sent Successfully!</h3>
+        <h3 className="text-2xl font-bold text-[#000a57] mb-2 font-[family-name:--font-poppins]">
+          Message Sent Successfully!
+        </h3>
         <p className="text-gray-600 max-w-sm mx-auto">
-          Thank you for reaching out. We have received your message and our team will get back to you shortly.
+          Thank you for reaching out. We have received your message and our team
+          will get back to you shortly.
         </p>
-        <button 
+        <button
           onClick={() => setIsSuccess(false)}
           className="mt-8 px-6 py-2.5 bg-[#002874] text-white font-semibold rounded-xl hover:bg-[#000a57] transition-colors"
         >
@@ -89,59 +98,83 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-[#000a57] mb-2">
+        <label
+          htmlFor="name"
+          className="block text-sm font-medium text-[#000a57] mb-2"
+        >
           Full Name
         </label>
         <input
           id="name"
           type="text"
-          className={`w-full px-4 py-3.5 bg-white border ${errors.name ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-[#002874] focus:ring-[#002874]/20'} rounded-xl focus:outline-none focus:ring-4 transition-all`}
+          className={`w-full px-4 py-3.5 bg-white border ${errors.name ? "border-red-500 focus:ring-red-200" : "border-gray-200 focus:border-[#002874] focus:ring-[#002874]/20"} rounded-xl focus:outline-none focus:ring-4 transition-all`}
           placeholder="e.g. Abdullah Ahmed"
-          {...register('name')}
+          {...register("name")}
         />
-        {errors.name && <p className="mt-1.5 text-sm text-red-500">{errors.name.message}</p>}
+        {errors.name && (
+          <p className="mt-1.5 text-sm text-red-500">{errors.name.message}</p>
+        )}
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-[#000a57] mb-2">
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium text-[#000a57] mb-2"
+        >
           Email Address
         </label>
         <input
           id="email"
           type="email"
-          className={`w-full px-4 py-3.5 bg-white border ${errors.email ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-[#002874] focus:ring-[#002874]/20'} rounded-xl focus:outline-none focus:ring-4 transition-all`}
+          className={`w-full px-4 py-3.5 bg-white border ${errors.email ? "border-red-500 focus:ring-red-200" : "border-gray-200 focus:border-[#002874] focus:ring-[#002874]/20"} rounded-xl focus:outline-none focus:ring-4 transition-all`}
           placeholder="e.g. abdullah@example.com"
-          {...register('email')}
+          {...register("email")}
         />
-        {errors.email && <p className="mt-1.5 text-sm text-red-500">{errors.email.message}</p>}
+        {errors.email && (
+          <p className="mt-1.5 text-sm text-red-500">{errors.email.message}</p>
+        )}
       </div>
 
       <div>
-        <label htmlFor="subject" className="block text-sm font-medium text-[#000a57] mb-2">
+        <label
+          htmlFor="subject"
+          className="block text-sm font-medium text-[#000a57] mb-2"
+        >
           Subject
         </label>
         <input
           id="subject"
           type="text"
-          className={`w-full px-4 py-3.5 bg-white border ${errors.subject ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-[#002874] focus:ring-[#002874]/20'} rounded-xl focus:outline-none focus:ring-4 transition-all`}
+          className={`w-full px-4 py-3.5 bg-white border ${errors.subject ? "border-red-500 focus:ring-red-200" : "border-gray-200 focus:border-[#002874] focus:ring-[#002874]/20"} rounded-xl focus:outline-none focus:ring-4 transition-all`}
           placeholder="How can we help you?"
-          {...register('subject')}
+          {...register("subject")}
         />
-        {errors.subject && <p className="mt-1.5 text-sm text-red-500">{errors.subject.message}</p>}
+        {errors.subject && (
+          <p className="mt-1.5 text-sm text-red-500">
+            {errors.subject.message}
+          </p>
+        )}
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-[#000a57] mb-2">
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-[#000a57] mb-2"
+        >
           Message
         </label>
         <textarea
           id="message"
           rows={5}
-          className={`w-full px-4 py-3.5 bg-white border ${errors.message ? 'border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-[#002874] focus:ring-[#002874]/20'} rounded-xl focus:outline-none focus:ring-4 transition-all resize-none`}
+          className={`w-full px-4 py-3.5 bg-white border ${errors.message ? "border-red-500 focus:ring-red-200" : "border-gray-200 focus:border-[#002874] focus:ring-[#002874]/20"} rounded-xl focus:outline-none focus:ring-4 transition-all resize-none`}
           placeholder="Tell us more about your inquiry..."
-          {...register('message')}
+          {...register("message")}
         ></textarea>
-        {errors.message && <p className="mt-1.5 text-sm text-red-500">{errors.message.message}</p>}
+        {errors.message && (
+          <p className="mt-1.5 text-sm text-red-500">
+            {errors.message.message}
+          </p>
+        )}
       </div>
 
       <button

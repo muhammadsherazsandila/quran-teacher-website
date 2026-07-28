@@ -62,8 +62,8 @@ export default function ContactPage() {
             </div>
             <h3 className="text-xl font-bold text-[#000a57] mb-2 font-[family-name:--font-poppins]">Email Us</h3>
             <p className="text-gray-600 mb-4">For detailed inquiries and support</p>
-            <a href="mailto:info@aljameelacademy.com" className="text-[#002874] font-bold text-lg hover:text-[#000a57] transition-colors">
-              info@aljameelacademy.com
+            <a href="mailto:aaljameelinternationalquranaca@gmail.com" className="block max-w-full text-[#002874] font-bold text-base sm:text-lg hover:text-[#000a57] transition-colors break-all leading-snug">
+              aaljameelinternationalquranaca@gmail.com
             </a>
           </div>
 
