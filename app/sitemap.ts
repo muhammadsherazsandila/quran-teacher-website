@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { blogPosts } from "@/app/data/blog-posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://aljameelacademy.com";
+  const baseUrl = "https://aljameelonlinequranacademy.com";
 
   const staticPages: MetadataRoute.Sitemap = [
     {

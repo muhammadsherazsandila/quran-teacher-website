@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const SITE_URL = "https://aljameelacademy.com";
+const SITE_URL = "https://aljameelonlinequranacademy.com";
 const SITE_NAME = "Al Jameel Online Quran Academy";
 
 export const defaultMetadata: Metadata = {
@@ -10,7 +10,7 @@ export const defaultMetadata: Metadata = {
     template: "%s | Al Jameel Online Quran Academy",
   },
   description:
-    "Learn Quran online with Al Jameel Online Quran Academy. Expert female teacher offering 1-on-1 classes for kids & adults. Noorani Qaida, Tajweed, Memorization & Islamic Studies. Book your free trial today!",
+    "Learn Quran online with Al Jameel Online Quran Academy. Expert female teacher offering 1-on-1 classes for kids & adults globally, including USA, UK, Canada, and Australia. Noorani Qaida, Tajweed, Memorization & Islamic Studies. Book your free trial today!",
   keywords: [
     "al jameel quran academy",
     "al jameel online quran academy",

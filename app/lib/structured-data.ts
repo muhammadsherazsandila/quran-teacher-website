@@ -1,4 +1,4 @@
-const SITE_URL = "https://aljameelacademy.com";
+const SITE_URL = "https://aljameelonlinequranacademy.com";
 const TEACHER_NAME = "Al Jameel Online Quran Academy";
 
 export function generatePersonSchema() {

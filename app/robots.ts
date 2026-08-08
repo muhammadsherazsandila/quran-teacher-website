@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://aljameelacademy.com/sitemap.xml",
+    sitemap: "https://aljameelonlinequranacademy.com/sitemap.xml",
   };
 }
